@@ -11,6 +11,10 @@
       <%= yield %>
 
     </div>
-
+    <% if logged_in?%>
+      <a href="/tweets/new"><button type="submit">Create New Tweet</button></a>
+      <a href="/tweets"><button type="submit">View All Tweets</button></a>
+      <a href="/logout"><button type="submit">Logout</button></a>
+    <% end %>
   </body>
 </html>
